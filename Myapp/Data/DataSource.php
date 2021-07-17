@@ -150,7 +150,7 @@ class DataSource {
   /**
    * Function Get Books.
    */
-  public static function createAuthor($id, $data) {
+  public static function createAuthor($data) {
     array_push(self::$authors, $data);
     return end(self::$authors);
   }
