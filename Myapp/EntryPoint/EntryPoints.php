@@ -73,11 +73,10 @@ $mutationType = new ObjectType([
     'createAuthor' => [
       'type' => $author,
       'args' => [
-        'id' => ['type' => Type::string()],
         'data' => ['type' => $authorInput],
       ],
       'resolve' => static function ($calc, array $args) {
-        return DataSource::createAuthor($args['id'], $args['data']);
+        return DataSource::createAuthor($args['data']);
       },
     ],
     'authors' => [
